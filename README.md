@@ -2,9 +2,9 @@
 
 ## Content
 
-⚠️ Under construction ⛏️
+_Sampe code_
 
-User List developed in Typescript, React & Styled-Components and tested with Jest and Enzyme
+User list that loads a large number of users using infinite scrolling in a simple way thanks to IntersectionObserver API. Also you can add/update and delete users thanks to the system developed and running under a server that represents a number of users mocked. Developed with Typescript, React & Styled-Components and tested with Jest and React Testing Library
 
 ## Getting Started
 
@@ -87,6 +87,42 @@ In addition to the fact that we don't use Redux, we follow the functional progra
 
 Besides the use of closures, currying, and so on...
 
+## Why were Jest and React Testing Library chosen as testing tools?
+
+The test base of this project is an example of past experience and research about great developers in React and experts in testing.
+
+**What to try and how to do it?**
+
+We've based ourselves on the scheme that Maggie Appleton created for TestingJavaScript.com that illustrates well the types of tests and why they are important in the testing process:
+
+![testing-trophy](./src/assets/images/testing-trophy.png)
+
+We've to take into account the following analysis, as described by Kent C. Doods: 2 of the 3 factors that usually measure the use of a particular test type are speed and cost. The higher the "trophy" the slower and more expensive the process will be so we've to choose well in which way to test and this is where the last of the factors, confidence, comes in.
+
+We quote from it:
+
+> _The more your tests resemble the way your software is used, the more confidence they can give you._
+
+Therefore, there is no better way to ensure that the application will work when the user uses it than by doing the same thing the user would do, and this is also the reason why we write tests.
+
+So obviously although the first 2 factors will increase when we go up for the trophy it also increases the latter and that in this test is of particular interest to us. Therefore, we have focused, although in the form of some particular example, on some of the highest and most weighty of the trophy.
+
+This also gives us an advantage and that is that, when testing different components together we won't need to test them all in isolation.
+
+We aren't looking for 100% code coverage. Why? Because as described by Kent C. Dodds in his article [Common Testing Mistakes](https://kentcdodds.com/blog/common-testing-mistakes) code coverage doesn't describe if the code works according to the client's requirements, if it works with other code in the application or if the application could fall into a wrong state.
+
+We also return to the question: **Why do we write a test?**
+
+A logical answer would be to be sure that our application will work when the user uses it, so we should think less about the written code and think more about the use cases. So to solve these problems and be sure we will focus not on code coverage but on use case coverage.
+
+**What advantages do we get from this?**
+
+A test is useless if we try the code because it has to be modified every time it is refactored so we are going to avoid testing based on implementation details.
+
+Also, it will generate more confidence the more the tests are similar to the application.
+
+Using react-testing-library together with jest has been because this library is free of implementation details, so when launching the tests it allows you to focus on the user experience.
+
 ## How did we get the features?
 
 To show the list, we've loaded in a mocked api the users file and in it added to each one the age attribute and mainly the id, important for the lists rendering.
@@ -96,8 +132,6 @@ For the order of it, we've generated the first list and on it we generate a seco
 Finally, to edit users within the list, thanks to reusing components we've generated a card that depending on the mode will display some action buttons and let you edit. As we don't want to edit any data until the user is sure of it, we save everything in an intermediate object that will finally update the list when the button actions.
 
 ## What would be missing to improve or what should be added that has not entered the proposed time?
-
-- Unit tests after each of the functionalities, at least in the business layer that can add, delete or modify data.
 
 In addition to the representation of the components to show the expected result and compare it with the obtained one.
 
