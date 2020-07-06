@@ -135,7 +135,7 @@ Finally, to edit users within the list, thanks to reusing components we've gener
 
 In addition to the representation of the components to show the expected result and compare it with the obtained one.
 
-- Improved design to increase response quality, as well as use in different browsers
+- Improved design to increase response quality, as well as use in different browsers (Desktop-centric design, enhanced for mobile design)
 
 - Code refactoring to encapsulate most common parts and abstract component parts to make them as silly / representative as possible
 
