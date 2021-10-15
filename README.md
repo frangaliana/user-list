@@ -2,7 +2,7 @@
 
 ## Content
 
-_Sampe code_
+_Sample code_
 
 User list that loads a large number of users using infinite scrolling in a simple way thanks to IntersectionObserver API. Also you can add/update and delete users thanks to the system developed and running under a server that represents a number of users mocked. Developed with Typescript, React & Styled-Components and tested with Jest and React Testing Library
 
